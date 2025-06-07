@@ -1,20 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-// const protect = require('../middlewares/authMiddleware');
-// const adminOnly = require('../middlewares/adminMiddleware');
-
-// // ✅ Anyone logged in
-// router.get('/profile', protect, (req, res) => {
-//   res.json({ message: 'This is your profile', user: req.user });
-// });
-
-// // ✅ Only admin
-// router.delete('/admin/deleteUser/:id', protect, adminOnly, (req, res) => {
-//   res.json({ message: `Admin deleted user with ID ${req.params.id}` });
-// });
-
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 const protect = require('../middlewares/authMiddleware');

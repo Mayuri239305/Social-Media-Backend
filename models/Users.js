@@ -19,16 +19,5 @@ const userSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-// const bcrypt = require('bcryptjs');
-
-// userSchema.pre('save', async function (next) {
-//   if (!this.isModified('password')) return next();
-//   this.password = await bcrypt.hash(this.password, 12);
-//   next();
-// });
-
-// userSchema.index({ username: 1 });
-
-
 module.exports = mongoose.model('User', userSchema);
 
