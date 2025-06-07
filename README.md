@@ -1,4 +1,3 @@
-
 # **Social Media Backend**
 This is a production-ready backend API built for a social media application using **Node.js**, **Express.js**, **MongoDB**, and **JWT authentication**.  
 It supports core social media features like:
@@ -138,14 +137,15 @@ It supports core social media features like:
 * | PUT    | /notifications/read   | Mark all as read          |
 
 
-🛡️ Privacy Settings
+# Privacy Settings
+
 *  Use the /users/update endpoint with a body like:
-{
-  "privacy": {
-    "profile": "followers",
-    "posts": "public"
-  }
-}
+*  {
+*   "privacy": {
+*     "profile": "followers",
+*     "posts": "public"
+*   }
+* }
 
 # Error Handling
 
@@ -190,4 +190,4 @@ It supports core social media features like:
 * AWS EC2 / Lightsail
 
 # Developer
-# Mayuri Mahendra Ambelkar.
+*  Mayuri Mahendra Ambelkar.
