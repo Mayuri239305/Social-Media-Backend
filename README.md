@@ -63,17 +63,16 @@ It supports core social media features like:
 
 # Folder Structure
 * social-media-backend/
-│
-├── controllers/        # Route logic (auth, users, posts, etc.)
-├── routes/             # Route definitions
-├── models/             # Mongoose schemas (User, Post, Message, etc.)
-├── middlewares/        # JWT Auth, Error Handling, Validation
-├── utils/              # Privacy checks and helper functions
-├── config/             # Database and Redis configuration
-├── swagger/            # Swagger config and setup
-├── .env.example        # Sample environment variables
-├── server.js           # Entry point
-└── README.md           # Project documentation
+* controllers/        # Route logic (auth, users, posts, etc.)
+* routes/             # Route definitions
+* models/             # Mongoose schemas (User, Post, Message, etc.)
+* middlewares/        # JWT Auth, Error Handling, Validation
+* utils/              # Privacy checks and helper functions
+* config/             # Database and Redis configuration
+* swagger/            # Swagger config and setup
+* .env.example        # Sample environment variables
+* server.js           # Entry point
+* README.md           # Project documentation
 
 # Authentication
 * All protected routes require a Bearer token in the Authorization header:
@@ -88,45 +87,56 @@ It supports core social media features like:
 *  Version
 *  API Version: 1.0.0
 
-# Auth Routes
-*  Base URL
-*  Method	Endpoint	    Description
-*  POST	  /auth/signup	Register a new user
-*  POST	  /auth/login	  Login existing user
+# Auth Routes  
+* Base URL  
 
-# User Routes
-*  Base URL
-*  Method	 Endpoint	                    Description
-*  GET	   /users/profile	              Get current user's profile
-*  GET	   /users/profile/:id	          Get another user’s profile
-*  PUT	   /users/update	              Update profile or privacy settings
-*  GET	   /users/search?q=keyword	    Search users
-*  PUT	   /users/follow/:id	          Follow or unfollow a user
-*  GET	   /users/follow-data	          Get followers and following
-*  DELETE	 /users/admin/deleteUser/:id	Delete a user (Admin only)
+* | Method | Endpoint     | Description          |
+* |--------|--------------|----------------------|
+* | POST   | /auth/signup | Register a new user  |
+* | POST   | /auth/login  | Login existing user  |
 
-# Post Routes
-*  Base URL
-*  Method	 Endpoint	                    Description
-*  POST	   /posts/create	              Create a new post
-*  PUT	   /posts/like/:id	            Like or Unlike a post
-*  PUT	   /posts/bookmark/:id	        Bookmark or Unbookmark a post
-*  POST	   /posts/comment/:id	          Comment on a post
-*  GET	   /posts/hashtag/:tag	        Get posts by hashtag
-*  GET	   /posts/public?page=1	        Get public posts with pagination
+# User Routes  
+* Base URL  
 
-# Messaging Routes
-*  Base URL
-*  Method	 Endpoint	                    Description
-*  POST	   /messages	                  Send a message to another user
-*  GET	   /messages/:userId	          Get conversation with a user
-*  PUT	   /messages/read/:userId	Mark  messages as read
+* | Method  | Endpoint                        | Description                          |
+* |---------|----------------------------------|--------------------------------------|
+* | GET     | /users/profile                   | Get current user's profile           |
+* | GET     | /users/profile/:id               | Get another user’s profile           |
+* | PUT     | /users/update                    | Update profile or privacy settings   |
+* | GET     | /users/search?q=keyword          | Search users                         |
+* | PUT     | /users/follow/:id                | Follow or unfollow a user            |
+* | GET     | /users/follow-data               | Get followers and following          |
+* | DELETE  | /users/admin/deleteUser/:id      | Delete a user (Admin only)           |
 
-# Notification Routes
-*  Base URL
-*  Method	 Endpoint	                    Description
-*  GET	   /notifications	              Get all notifications
-*  PUT	   /notifications/read	        Mark all as read
+# Post Routes  
+* Base URL  
+
+* | Method | Endpoint              | Description                          |
+* |--------|------------------------|--------------------------------------|
+* | POST   | /posts/create          | Create a new post                    |
+* | PUT    | /posts/like/:id        | Like or Unlike a post                |
+* | PUT    | /posts/bookmark/:id    | Bookmark or Unbookmark a post        |
+* | POST   | /posts/comment/:id     | Comment on a post                    |
+* | GET    | /posts/hashtag/:tag    | Get posts by hashtag                 |
+* | GET    | /posts/public?page=1   | Get public posts with pagination     |
+
+# Messaging Routes  
+* Base URL  
+
+* | Method | Endpoint                | Description                         |
+* |--------|-------------------------|-------------------------------------|
+* | POST   | /messages               | Send a message to another user      |
+* | GET    | /messages/:userId       | Get conversation with a user        |
+* | PUT    | /messages/read/:userId  | Mark messages as read               |
+
+# Notification Routes  
+* Base URL  
+
+* | Method | Endpoint              | Description               |
+* |--------|-----------------------|---------------------------|
+* | GET    | /notifications        | Get all notifications     |
+* | PUT    | /notifications/read   | Mark all as read          |
+
 
 🛡️ Privacy Settings
 *  Use the /users/update endpoint with a body like:
@@ -140,20 +150,22 @@ It supports core social media features like:
 # Error Handling
 
 * Test error route:
-  
-* Method	Endpoint	         Response
-* GET	    /invalid-endpoint	 404 Not Found (JSON)
+
+* | Method | Endpoint           | Response               |
+* |--------|--------------------|------------------------|
+* | GET    | /invalid-endpoint  | 404 Not Found (JSON)   |
 
 # Response Codes
 
-* Code	Meaning
-* 200	  OK / Success
-* 201	  Created
-* 400	  Bad Request
-* 401	  Unauthorized
-* 403	  Forbidden
-* 404	  Not Found
-* 500	  Internal Server Error
+* | Code | Meaning                  |
+* |------|--------------------------|
+* | 200  | OK / Success             |
+* | 201  | Created                  |
+* | 400  | Bad Request              |
+* | 401  | Unauthorized             |
+* | 403  | Forbidden                |
+* | 404  | Not Found                |
+* | 500  | Internal Server Error    |
 
 # Testing & API Exploration
 
@@ -178,4 +190,4 @@ It supports core social media features like:
 * AWS EC2 / Lightsail
 
 # Developer
-* Mayuri Mahendra Ambelkar.
+# Mayuri Mahendra Ambelkar.
