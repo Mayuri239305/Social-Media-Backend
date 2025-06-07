@@ -1,24 +1,3 @@
-// const express = require('express');
-// const router = express.Router();
-// const protect = require('../middlewares/authMiddleware');
-// const Notification = require('../models/Notification');
-
-// router.get('/', protect, async (req, res) => {
-//   const notifications = await Notification.find({ user: req.user.id })
-//     .populate('fromUser', 'username')
-//     .populate('post', 'text')
-//     .sort({ createdAt: -1 });
-
-//   res.json(notifications);
-// });
-
-// router.put('/read', protect, async (req, res) => {
-//   await Notification.updateMany({ user: req.user.id, read: false }, { read: true });
-//   res.json({ message: 'All notifications marked as read' });
-// });
-
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 const protect = require('../middlewares/authMiddleware');
