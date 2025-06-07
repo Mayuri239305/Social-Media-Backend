@@ -1,14 +1,3 @@
-// function canViewProfile(currentUser, targetUser) {
-//   if (targetUser.privacy.profile === 'public') return true;
-//   if (targetUser.privacy.profile === 'followers') {
-//     return targetUser.followers.includes(currentUser._id);
-//   }
-//   return currentUser._id.equals(targetUser._id); // Self only
-// }
-// module.exports = canViewProfile;
-
-// utils/privacyCheck.js
-
 function canViewProfile(currentUser, targetUser) {
   if (targetUser.privacy?.profile === 'public') return true;
 
